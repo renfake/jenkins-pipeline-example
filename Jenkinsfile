@@ -1,10 +1,9 @@
 pipeline {
-    agent { 
-        docker { image 'node' }
-    }
+    agent any
     stages {
         stage('build') {
             steps {
+                sh 'whoami'
                 sh 'node --version'
             }
         }
